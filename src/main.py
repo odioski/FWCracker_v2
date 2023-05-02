@@ -7,7 +7,7 @@
 ##  FWCracker in general view the README.
 ##
 ##  The original code for FWCracker is below this code in a block comment. Select it all, copy and paste to a new *.py file and uncomment and it should work.
-##  As I mentioned in the code and elsewhere I believe there is some timining issue with macs's or they don't recognize the emulator's I use. So, that's all for that.
+##  As I mentioned in the code and elsewhere I believe there is some timing issue with macs's or they don't recognize the emulator's I use. So, that's all for that.
 ##  
 ##  If you need something to bypass a Window's Machine or PC, this will work for you just fine, for now. I'll be updating continuously although sporadically and not
 ##  very often. Just tidying up the user interface and making things a bit more friendly. The essential logic of the code and operatability is pretty much done. After I
