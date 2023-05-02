@@ -19,6 +19,7 @@
 ##
 ##
 ##  UPDATE 5/2/23
+##
 ##  After furhter investigation I learned that the mac I was using for testing was compromised. Thus the perceived timing or keyboard communication issue. I began to suspect
 ##  that having two keyboards plugged in (one of them being the emulator) was the issue, but after some thought I realized no keyboard is actually needed in the 
 ##  first stage of a boot lock, since the point is to keep one from accessing any of the system until the password is given. So, either my firmware was corrupted or Apple had their 
