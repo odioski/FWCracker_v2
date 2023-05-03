@@ -9,9 +9,7 @@ As I mentioned in the code and elsewhere I believe there is some timing issue wi
   
 If you need something to bypass a Window's Machine or PC, this will work for you just fine, for now. I'll be updating continuously although sporadically and not
 very often. Just tidying up the user interface and making things a bit more friendly. The essential logic of the code and operatability is pretty much done. After I
-read up on how to package this properly for any user, that will probably be all for this and python. Unfortunately the hater's are in a frenzy trying once again to
-disavow all that I do. Such is normal operating procedure and not much of a surprise, although I do admit I was hoping for something a little more original.
-Perhaps a 'thank-you' or an 'I appreciate it'. Simple courtesy, that's all.
+read up on how to package this properly for any user, that will probably be all for this. 
 
 So, enjoy.
 
