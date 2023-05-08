@@ -36,7 +36,7 @@ import subprocess
 
 
 code = "pyserial-ports -v"
-#   Just in case anyone needs it...
+#   Just in case someone needs it...
  
 
 def welcome_user():
