@@ -20,8 +20,10 @@
 ##
 ##  After furhter investigation I learned that the mac I was using for testing was compromised. Thus the perceived timing or keyboard communication issue. I began to suspect
 ##  that having two keyboards plugged in (one of them being the emulator) was the issue, but after some thought I realized no keyboard is actually needed in the 
-##  first stage of a boot lock, since the point is to keep one from accessing any of the system until the password is given. So, either my firmware was corrupted or the POST is built wrong.
-##  There should be no way to enter Cmd-Option-R to access either the firmware or the recovery system without first passing the check, from the firmware/boot lock. 
+##  first stage of a boot lock, since the point is to keep one from accessing any of the system until the password is given. So, either my firmware was corrupted or 
+##  the POST is built wrong. There should be no way to enter Cmd-Option-R to access either the firmware or the recovery system without first passing the check, 
+##  from the firmware/boot lock. 
+##
 ##  Because that's what a firmware/boot lock is supposed to do. That is the layer of protection it provides given it's operating normally.
 ##
 ##  Therefore, there is no issue with the macs, and you can use this app equally on both PC and Apple end-user workstation platforms.
@@ -37,6 +39,10 @@ import subprocess
 
 code = "pyserial-ports -v"
 #   Just in case someone needs it...
+
+ser = serial.Serial(hid_port)
+ser.baudrate = 9600
+#   PySerial and part of the setup...
  
 
 def welcome_user():
@@ -53,6 +59,7 @@ def welcome_user():
     time.sleep(3)
     hid_port = input("Type the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
     print("\nYou're device is set: " + hid_port + "\n")
+
     get_hints()
 
 
@@ -63,14 +70,14 @@ def get_hints():
     number_pattern = input("Type in the part of the password which you believe is a number. Your best guess really is suitable: ")
     z = -1
     while z <= 0:
-        checker = number_pattern
+        check = number_pattern
         global_number_pattern = number_pattern
-        if checker.isdecimal():
+        if check.isdecimal():
             control =input("Does your BIOS require re-confirmation on failed attempts? Y or N:\n")
             z = 1
             print("Got it...\n")
             time.sleep(4)
-            print("We'll begin in just a few seconds. Make sure you keep the power on you'll have to start over... \n")
+            print("We'll begin in just a few seconds. Make sure you keep the power on or you'll have to start over... \n")
             time.sleep(5)
             print("Here we go...\n")
             time.sleep(3)
@@ -85,9 +92,7 @@ def get_hints():
         elif number_pattern == 'q':
             print("Goodbye...")
             z = 1
-        elif number_pattern != 'Q':
-            print("Sorry...You can start over whenever you like...")
-            z = 1
+        
         
 
 def build_range(global_number_pattern, some_word, control):
