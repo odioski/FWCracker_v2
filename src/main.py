@@ -61,12 +61,11 @@ def find_port():
     time.sleep(2)
     subprocess.run(code)
     time.sleep(3)
-    local_port = input("Type the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
-    print("\nYou're device is set: " + local_port + "\n")
-    return local_port
+    hid_port = input("Type the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
+    print("\nYou're device is set: " + hid_port + "\n")
+    return hid_port
 
 
-hid_port = local_port
 
 
 def get_hints():
