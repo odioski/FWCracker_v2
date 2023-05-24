@@ -40,8 +40,6 @@ import subprocess
 code = "pyserial-ports -v"
 #   Just in case someone needs it...
 
-local_port = ""
-#   The only setup you'll ever need...?
 
 def welcome_user():
     print("\n\nWelcome to FWCracker 2 \n")
@@ -57,11 +55,11 @@ def welcome_user():
 
 def find_port():
     print("\nThis is probably the stickiest question so I'll start here. Which port is you emulator connected to?\n"
-            "Here's what I found \n")
+            "\nHere's what I found \n")
     time.sleep(2)
     subprocess.run(code)
-    time.sleep(3)
-    hid_port = input("Type the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
+    time.sleep(1)
+    hid_port = input("\nType the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
     print("\nYou're device is set: " + hid_port + "\n")
     return hid_port
 
@@ -70,14 +68,14 @@ def find_port():
 
 def get_hints():
     print("While answering these questions, try to keep the numbers and words seperate...")
-    some_word = input("Type in the word or phrase you think is part of the password, then press enter: ")
-    number_pattern = input("Type in the part of the password which you believe is a number. Your best guess really is suitable: ")
+    some_word = input("\nType in the word or phrase you think is part of the password, then press enter: ")
+    number_pattern = input("\nType in the part of the password which you believe is a number. Your best guess really is suitable: ")
     z = -1
     while z <= 0:
         check = number_pattern
         global_number_pattern = number_pattern
         if check.isdecimal():
-            control =input("Does your BIOS require re-confirmation on failed attempts? Y or N:")
+            control =input("\nDoes your BIOS require re-confirmation on failed attempts? Y or N:")
             print("\nGot it...\n")
             time.sleep(4)
             print("We'll begin in just a few seconds. Make sure you keep the power on or you'll have to start over... \n")
@@ -87,20 +85,27 @@ def get_hints():
             z = 1
             build_range(global_number_pattern, some_word, control)
         else:
-            while z <= 0:
-                number_pattern = input("This app will only attempt at simple passwords, ie., abc123 "
+            while check.isdecimal() == False:
+                number_pattern = input("\nThis app will only attempt at simple passwords, ie., abc123 "
                 "if there is no number as part of the sequence, this won't help \n"
                 "Please enter a number here or Q to exit: ")
-                if number_pattern == 'Q':
-                    print("Goodbye...")
+                check = number_pattern
+                if check.isdecimal():
+                    control =input("\nDoes your BIOS require re-confirmation on failed attempts? Y or N:")
+                    print("\nGot it...\n")
+                    time.sleep(4)
+                    print("We'll begin in just a few seconds. Make sure you keep the power on or you'll have to start over... \n")
+                    time.sleep(5)
+                    print("Here we go...\n")
+                    time.sleep(3)
                     z = 1
+                    build_range(global_number_pattern, some_word, control)
+                elif number_pattern == 'Q':
+                    print("Goodbye...")
+                    exit()
                 elif number_pattern == 'q':
                     print("Goodbye...")
-                    z = 1
-                elif check.isdecimal() == False:
-                    print(".::Music::.")
-                    z = 1
-        
+                    exit()        
         
 
 def build_range(global_number_pattern, some_word, control):
@@ -188,7 +193,7 @@ def build_passcode(some_word, control, set_range):
 
 def do_writer_do(to_bytes, n, passcode, control, set_range):
     print("This is attempt #" + str(n) + " of " + str(set_range) + ", using this password: " + passcode)
-    time.sleep(3)
+    time.sleep(1)
 #   The mac issue was resolved 5/2/23, I'll release my personal notes maybe if it proves profitable. 
 #   Basically, a long delay is no longer necessary and the app works on PC's and Mac's equally.
 #   Therefore, only a 2-3 second delay is ever needed. With new hardware, we may be able to 
