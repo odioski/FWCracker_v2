@@ -11,7 +11,7 @@
 ##  
 ##  If you need something to bypass a Window's Machine or PC, this will work for you just fine, for now. I'll be updating continuously although sporadically and not
 ##  very often. Just tidying up the user interface and making things a bit more friendly. The essential logic of the code and operatability is pretty much done. After I
-##  read up on how to package this properly for any user, that will probably be all for this . 
+##  read up on how to package this properly for any user, that will probably be all for this. 
 ##
 ##  So, enjoy.
 ##
@@ -40,10 +40,8 @@ import subprocess
 code = "pyserial-ports -v"
 #   Just in case someone needs it...
 
-ser = serial.Serial(hid_port)
-ser.baudrate = 9600
-#   PySerial and part of the setup...
- 
+local_port = ""
+#   The only setup you'll ever need...?
 
 def welcome_user():
     print("\n\nWelcome to FWCracker 2 \n")
@@ -52,16 +50,23 @@ def welcome_user():
             "The passwords we can crack are simple passwords. In other words, abc123. Anything more complex and there isn't much we can do that won't take a lifetime to process. \n"
             "Of course if you're feeling adventurous, a raw brute-force mode is currently being formulated.\n\n"
             "Press 'Enter' to continue...")
+    find_port()    
+    get_hints()
+
+
+
+def find_port():
     print("\nThis is probably the stickiest question so I'll start here. Which port is you emulator connected to?\n"
             "Here's what I found \n")
     time.sleep(2)
     subprocess.run(code)
     time.sleep(3)
-    hid_port = input("Type the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
-    print("\nYou're device is set: " + hid_port + "\n")
+    local_port = input("Type the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
+    print("\nYou're device is set: " + local_port + "\n")
+    return local_port
 
-    get_hints()
 
+hid_port = local_port
 
 
 def get_hints():
@@ -73,25 +78,28 @@ def get_hints():
         check = number_pattern
         global_number_pattern = number_pattern
         if check.isdecimal():
-            control =input("Does your BIOS require re-confirmation on failed attempts? Y or N:\n")
-            z = 1
-            print("Got it...\n")
+            control =input("Does your BIOS require re-confirmation on failed attempts? Y or N:")
+            print("\nGot it...\n")
             time.sleep(4)
             print("We'll begin in just a few seconds. Make sure you keep the power on or you'll have to start over... \n")
             time.sleep(5)
             print("Here we go...\n")
             time.sleep(3)
+            z = 1
             build_range(global_number_pattern, some_word, control)
         else:
-            number_pattern = input("This app will only attempt at simple passwords, ie., abc123 "
+            while z <= 0:
+                number_pattern = input("This app will only attempt at simple passwords, ie., abc123 "
                 "if there is no number as part of the sequence, this won't help \n"
                 "Please enter a number here or Q to exit: ")
-        if number_pattern == 'Q':
-            print("Goodbye...")
-            z = 1
-        elif number_pattern == 'q':
-            print("Goodbye...")
-            z = 1
+                if number_pattern == 'Q':
+                    print("Goodbye...")
+                    z = 1
+                elif number_pattern == 'q':
+                    print("Goodbye...")
+                    z = 1
+                elif check.isdecimal() == False:
+                    print(".::Music::.")
         
         
 
@@ -185,6 +193,9 @@ def do_writer_do(to_bytes, n, passcode, control, set_range):
 #   Basically, a long delay is no longer necessary and the app works on PC's and Mac's equally.
 #   Therefore, only a 2-3 second delay is ever needed. With new hardware, we may be able to 
 #   eliminate it altogehter.
+    ser = serial.Serial(hid_port)
+    ser.baudrate = 9600
+#   PySerial and part of the setup...
     ser.write(to_bytes)
     time.sleep(1)
     if str(control) == 'y':
