@@ -99,6 +99,7 @@ def get_hints():
                     z = 1
                 elif check.isdecimal() == False:
                     print(".::Music::.")
+                    z = 1
         
         
 
