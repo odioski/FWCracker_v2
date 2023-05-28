@@ -24,7 +24,7 @@
 ##  the POST is built wrong. There should be no way to enter Cmd-Option-R to access either the firmware or the recovery system without first passing the check, 
 ##  from the firmware/boot lock. 
 ##
-##  Because that's what a firmware/boot lock is supposed to do. That is the layer of protection it provides given it's operating normally.
+##  Because that's what a firmware/boot lock is supposed to do. That's the layer of protection it provides given it's operating normally.
 ##
 ##  Therefore, there is no issue with the macs, and you can use this app equally on both PC and Apple end-user workstation platforms.
 ####################################################################################################################################################################
