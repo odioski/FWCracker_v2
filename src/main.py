@@ -74,6 +74,11 @@ def get_hints():
     while z <= 0:
         check = number_pattern
         global_number_pattern = number_pattern
+        while check.isdecimal() == False:
+            number_pattern = input("\nThis app will only attempt at simple passwords, ie., abc123 "
+            "if there is no number as part of the sequence, this won't help \n"
+            "Please enter a number here or Q to exit: ")
+            check = number_pattern
         if check.isdecimal():
             control =input("\nDoes your BIOS require re-confirmation on failed attempts? Y or N:")
             print("\nGot it...\n")
@@ -84,28 +89,12 @@ def get_hints():
             time.sleep(3)
             z = 1
             build_range(global_number_pattern, some_word, control)
-        else:
-            while check.isdecimal() == False:
-                number_pattern = input("\nThis app will only attempt at simple passwords, ie., abc123 "
-                "if there is no number as part of the sequence, this won't help \n"
-                "Please enter a number here or Q to exit: ")
-                check = number_pattern
-                if check.isdecimal():
-                    control =input("\nDoes your BIOS require re-confirmation on failed attempts? Y or N:")
-                    print("\nGot it...\n")
-                    time.sleep(4)
-                    print("We'll begin in just a few seconds. Make sure you keep the power on or you'll have to start over... \n")
-                    time.sleep(5)
-                    print("Here we go...\n")
-                    time.sleep(3)
-                    z = 1
-                    build_range(global_number_pattern, some_word, control)
-                elif number_pattern == 'Q':
-                    print("Goodbye...")
-                    exit()
-                elif number_pattern == 'q':
-                    print("Goodbye...")
-                    exit()        
+        elif number_pattern == 'Q':
+            print("Goodbye...")
+            exit()
+        elif number_pattern == 'q':
+            print("Goodbye...")
+            exit()        
         
 
 def build_range(global_number_pattern, some_word, control):
@@ -177,6 +166,7 @@ def starter(global_number_pattern, keep, some_word, control, set_range):
         print("Goodbye...")
     else:
         print("..::Music::..")
+        exit()
     time.sleep(3)
         
 
@@ -189,6 +179,7 @@ def build_passcode(some_word, control, set_range):
         do_writer_do(to_bytes, n, passcode, control, set_range)
         n += 1
     print("Later...")
+    exit()
 
 
 def do_writer_do(to_bytes, n, passcode, control, set_range):
