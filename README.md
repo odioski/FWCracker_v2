@@ -10,7 +10,7 @@ it should work just fine.
 	2. A USB to TTL cable to connect to the emulator. These are more easily found here.
 	3. A module called PySerial which can be had from PyPi.org via pip
 *You can follow this link to have a look at what the hid/emulator looks like:
-	- https://tinyurl.com/5xe4n4mn
+	https://tinyurl.com/5xe4n4mn
 
 I've considered expanding it to include user input (hints) and possibly some randomization with the hopes of making it faster.
 That's why it's there on Github.
