@@ -18,7 +18,7 @@ UPDATE 5/2/23
 
 After furhter investigation I learned that the mac used for testing was compromised. Thus the perceived timing or keyboard communication issue. I began to suspect
 that having two keyboards plugged in (one of them being the emulator) was the issue, but after some thought I realized no keyboard is actually needed in the 
-first stage of a boot lock, since the point is to keep one from accessing any of the system until the password is given. So, either my firmware was corrupted or Apple deviated
+first stage of a boot lock, since the point is to keep one from accessing any of the system until the password is given. So, either my firmware was corrupted or someone deviated
 when they built the POST. There should be no way to enter Cmd-Option-R to access either the firmware or the recovery system without first passing the 
 check, from the firmware/boot lock. Because that's what a firmware/boot lock is supposed to do. That is the layer of protection it provides given it's operating normally.
 
