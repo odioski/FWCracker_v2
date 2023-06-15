@@ -263,19 +263,19 @@ import serial
 #   and this piece is the real magic behind the script.
 
 
-Word1 = "Xbox"
-Word2 = "xbox"
-Word3 = "XBOX"
-Word4 = "xBOX"
+WORD_1 = "Xbox"
+WORD_2 = "xbox"
+WORD_3 = "XBOX"
+WORD_4 = "xBOX"
 #
 #   These were my favorite words for simple passwords like firmware passwords. As you can see, bruteforce is hard to do.
 #   I don't use any of these with my devices anymore so don't feel suspect for reading this...
 #   You can and should change the constants to your own word patterns or add more or less if needed.
 #
-Word5 = "App"
-Word6 = "app"
-Word7 = "APP"
-Word8 = "aPP"
+WORD_5 = "App"
+WORD_6 = "app"
+WORD_7 = "APP"
+WORD_8 = "aPP"
 #
 #
 #
@@ -305,7 +305,7 @@ def pass_guesser(counter, attempts):
     while n <= 9999:                         ##############################################################
         #   Trying for Xbox...                                                                          #            This loop can be and is iterated for each suspected
         counter += 1    #   Titan                                                                       #            word pattern. As far as the part of the combo which
-        WordPattrn = Word1                                                                              #            includes numbers, use 'the imagined largest factor 
+        WordPattrn = WORD_1                                                                              #            includes numbers, use 'the imagined largest factor 
         passcode = WordPattrn + str(n) + "\r"                                                     ###############    of those combined digits real number'~Boris
         print("\n This is attempt # " + str(counter) + " in this sequence..." + str(passcode))      ###########      So if you suspect the number is 4195, maybe, then count 
         do_writer_do(passcode, ser, clear)                                                              #            to 5000. If you think it's 332 then count to 400 or
@@ -323,7 +323,7 @@ def pass_guesser(counter, attempts):
     counter = 0
     while n <= 9999:
         #   Trying for xbox
-        WordPattrn = Word2
+        WordPattrn = WORD_2
         passcode = WordPattrn + str(n) + "\r"
         print("\n This is attempt # " + str(counter) + " in this sequence..." + str(passcode))
         do_writer_do(passcode, ser, clear)
@@ -337,7 +337,7 @@ def pass_guesser(counter, attempts):
     status(attempts)
     while n <= 9999:
         #   Trying for XBOX...
-        WordPattrn = Word3
+        WordPattrn = WORD_3
         passcode = WordPattrn + str(n) + "\r"
         print("\n This is attempt # " + str(counter) + " in this sequence..." + str(passcode))
         do_writer_do(passcode, ser, clear)
@@ -351,7 +351,7 @@ def pass_guesser(counter, attempts):
     status(attempts)
     while n <= 9999:
         # Trying for xBOX...
-        WordPattrn = Word4
+        WordPattrn = WORD_4
         passcode = WordPattrn + str(n) + "\r"
         print("\n This is attempt # " + str(counter) + " in this sequence..." + str(passcode))
         do_writer_do(passcode, ser, clear)
@@ -365,7 +365,7 @@ def pass_guesser(counter, attempts):
     status(attempts)
     while n <= 9999:
         #   Trying for App...
-        WordPattrn = Word5
+        WordPattrn = WORD_5
         passcode = WordPattrn + str(n) + "\r"
         print("\n This is attempt # " + str(counter) + " in this sequence..." + str(passcode))
         do_writer_do(passcode, ser, clear)
@@ -379,7 +379,7 @@ def pass_guesser(counter, attempts):
     status(attempts)
     while n <= 9999:
         #   Trying for app...
-        WordPattrn = Word6
+        WordPattrn = WORD_6
         passcode = WordPattrn + str(n) + "\r"
         print("\n This is attempt # " + str(counter) + " in this sequence..." + str(passcode))
         do_writer_do(passcode, ser, clear)
@@ -393,7 +393,7 @@ def pass_guesser(counter, attempts):
     status(attempts)
     while n <= 9999:
         #   Trying for APP...
-        WordPattrn = Word7
+        WordPattrn = WORD_7
         passcode = WordPattrn + str(n) + "\r"
         print("\n This is attempt # " + str(counter) + " in this sequence..." + str(passcode))
         do_writer_do(passcode, ser, clear)
@@ -407,7 +407,7 @@ def pass_guesser(counter, attempts):
     status(attempts)
     while n <= 9999:
         #   Trying for aPP...
-        WordPattrn = Word8
+        WordPattrn = WORD_8
         passcode = WordPattrn + str(n) + "\r"
         print("\n This is attempt # " + str(counter) + " in this sequence..." + str(passcode))
         do_writer_do(passcode, ser, clear)

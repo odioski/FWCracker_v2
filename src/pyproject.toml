@@ -1,9 +1,9 @@
 [tool.poetry]
-name = "fwcracker-v2"
-version = "1.0.0"
+name = "fwcracker"
+version = "2.0.0"
 description = "A simple password guesser for BIOS/Firmware password/locks."
 authors = ["Omar Daniels Sr. <author@bookmotives.com>"]
-readme = "README.md"
+readme = "../README.md"
 packages = [{include = "fwcracker_v2"}]
 
 [tool.poetry.dependencies]
