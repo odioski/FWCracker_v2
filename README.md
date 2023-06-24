@@ -37,12 +37,15 @@ I haven't gotten into GUI development yet but if I find a good source on the sub
 Download the source:
 	
 Clone from Github using git: 
+	
 	git clone https://github.com/odioski/FWCracker_v2.git
 	
 Navigate to src folder and use pip to get PySerial: 
+	
 	pip install pyserial
 
 Launch FWCracker:
+	
 	python -m main.py
 
 
