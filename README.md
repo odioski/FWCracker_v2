@@ -31,3 +31,15 @@ possibly be gained faster.
 
 I think you can see the idea clearly now and what my hopes are for this app. I'll continue to develop it, and branch off to create something more user friendly. 
 I haven't gotten into GUI development yet but if I find a good source on the subject I'll gladly add that in.
+
+# INSTALLATION
+
+Download the source:
+	
+	Clone from Github using git: git clone https://github.com/odioski/FWCracker_v2.git
+	Navigate to src folder and use pip to get PySerial: pip install pyserial
+
+Launch FWCracker:
+	python -m main.py
+
+
