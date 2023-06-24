@@ -49,7 +49,7 @@ Launch FWCracker:
 
 # SUPPORT
 
-If FWCracker can't find pyserial-ports you'll havet to add it to your path.
+If FWCracker can't find *pyserial-ports* you'll havet to add it to your *PATH*.
 
 You can find it on linux as su:
 
