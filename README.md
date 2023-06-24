@@ -52,6 +52,7 @@ Launch FWCracker:
 If FWCracker can't find pyserial-ports you'll havet to add it to your path.
 
 You can find it on linux as su:
+
 	find / -name pyserial-ports
  
  Or on Windows use the explorer.
