@@ -55,4 +55,3 @@ You can find it on linux as su:
 
 	find / -name pyserial-ports
  
- On Windows, use the explorer.
