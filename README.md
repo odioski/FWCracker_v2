@@ -33,8 +33,6 @@ I think you can see the idea clearly now and what my hopes are for this app. I'l
 I haven't gotten into GUI development yet but if I find a good source on the subject I'll gladly add that in.
 
 # INSTALLATION
-
-Download the source:
 	
 Clone from Github using git: 
 	
