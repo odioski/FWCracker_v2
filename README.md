@@ -46,6 +46,6 @@ Navigate to src folder and use pip to get PySerial:
 
 Launch FWCracker:
 	
-	python -m main.py
+	python main.py
 
 
