@@ -46,10 +46,14 @@ Launch FWCracker:
 	
 	python main.py
 
+Another option is to use the Pyinstaller created executable.
+
+Navigate to dist folder and unzip FWCracker.zip Inside is the FWCracker.exe
+
 
 # SUPPORT
 
-If FWCracker can't find *pyserial-ports* you'll havet to add it to your *PATH*.
+If FWCracker can't find *pyserial-ports* you'll have to add it to your *PATH*.
 
 You can find it on linux as su:
 
