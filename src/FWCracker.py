@@ -168,8 +168,8 @@ def FWCracker():
     def welcome_user():
         print("\n\nWelcome to FWCracker 2 \n")
         time.sleep(2)
-        input("The following questions will clue me in to what your password could possibly be. This app can only help you if you give me a hint. \n"
-                "The passwords we can crack are simple passwords. In other words, abc123. Anything more complex and there isn't much we can do that won't take a lifetime to process. \n"
+        input("The following questions will clue me in to what your password could possibly be. This app can only help you if you give me a hint. \n\n"
+                "The passwords we can crack are simple passwords. In other words, abc123. Anything more complex and there isn't much we can do that won't take a lifetime to process. \n\n"
                 "Of course if you're feeling adventurous, a raw brute-force mode is currently being formulated.\n\n"
                 "Press 'Enter' to continue...")
         get_hints()
