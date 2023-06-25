@@ -10,7 +10,7 @@ it should work just fine.
 	2. A USB to TTL cable to connect to the emulator. These are more easily found here.
 	3. A module called PySerial which can be had from PyPi.org via pip
 	
-*You can follow this link to have a look at what the hid/emulator looks like:* https://tinyurl.com/5xe4n4mn
+*You can follow this link to see what the hid/emulator looks like:* https://tinyurl.com/5xe4n4mn
 
 I've considered expanding it to include user input (hints) and possibly some randomization with the hopes of making it faster.
 That's why it's there on Github.
@@ -37,7 +37,7 @@ Clone from Github using git:
 	
 	git clone https://github.com/odioski/FWCracker_v2.git
 	
-Navigate to src folder and use pip to get PySerial: 
+Navigate to the src folder and use pip to get PySerial: 
 	
 	pip install pyserial
 
@@ -47,7 +47,7 @@ Launch FWCracker:
 
 Another option, if you rather not install Python is to use the Pyinstaller created executable.
 
-Navigate to dist folder and unzip FWCracker.zip Inside is FWCracker.exe
+Navigate to the dist folder and unzip FWCracker.zip Inside is FWCracker.exe
 
 
 # SUPPORT
