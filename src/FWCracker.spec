@@ -8,7 +8,7 @@ a = Analysis(
     ['FWCracker.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('C:\\Users\\Scripts\\', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
