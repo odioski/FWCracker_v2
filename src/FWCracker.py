@@ -1,8 +1,10 @@
 import time
 #   Needed for flow control
 
+
 import serial
 #   Needed for PySerial
+
 
 import subprocess
 #   Needed to run the helper code
@@ -13,6 +15,7 @@ code = "pyserial-ports -v"
 
 
 def FWCracker():
+    
     def find_port():
         global ser 
         global hid_port
