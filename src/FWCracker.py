@@ -176,10 +176,7 @@ def FWCracker():
                 "Of course if you're feeling adventurous, a raw brute-force mode is currently being formulated.\n\n"
                 "Press 'Enter' to continue...")
         get_hints()
-    
-    
+      
     welcome_user()
-
-
+    
 FWCracker()
-
