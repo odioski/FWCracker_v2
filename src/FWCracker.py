@@ -2,10 +2,10 @@ import time
 #   Needed for flow control
 
 import serial
-# Needed for PySerial
+#   Needed for PySerial
 
 import subprocess
-# Needed to run the helper code
+#   Needed to run the helper code
 
 
 code = "pyserial-ports -v"
@@ -29,7 +29,7 @@ def FWCracker():
 
         
     def get_hints():
-        print("While answering these questions, try to keep the numbers and words seperate...")
+        print("\n\nWhile answering these questions, try to keep the numbers and words seperate...")
         some_word = input("\nType in the word or phrase you think is part of the password, then press enter: ")
         number_pattern = input("\nType in the part of the password which you believe is a number. Your best guess really is suitable: ")
         z = -1
