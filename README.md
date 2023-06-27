@@ -1,7 +1,7 @@
 # FWCracker
 
-This script will attempt to guess at your password using most laymens favorited of password paradignms, ie., abc123. It's handy if you often use such passwords 
-with firmware locks on your devices. Most have long since stoped using these particular patterns but if you change the constants to suite your needs, 
+This script will attempt to guess at your password using most laymens favorited of password paradigms, ie., abc123. It's handy if you often use such passwords 
+with firmware locks on your devices. Most have long since stopped using these particular patterns but if you change the constants to suite your needs, 
 it should work just fine.
 
 *There are three things you'll need other than what you probably already have those being a Python interpreter and an IDE:*
@@ -20,7 +20,7 @@ mostly for older hardware and of course some of the relics are more than accessi
 firmware lock you're trying to bypass or a boot-up lock. Against an OS, I imagine you'll only have success with the most ancient of systems.
 
 And, if you haven't realized, hints or some idea of what the password is, is actually neccessary for this to work. This is why future versions will
-queery for hints, in order to help the app guess the right combination. Therefore, this application wouldn't be of much use to the Black Hat market, but owners 
+query for hints, in order to help the app guess the right combination. Therefore, this application wouldn't be of much use to the Black Hat market, but owners 
 of the gear, and some repair personnel could gain some use from it. Some Black Hat's could possibly use this, but those are the truly embedded (practiced) ones.
 
 Lastly, Brute-force makes an attempt for every possible combination of characters used in the suspected password. It takes more or less the same amount of code to write such, 
@@ -28,7 +28,7 @@ however more complex, but due to the speed of CMOS or BIOS in general, it would 
 but they're also *notoriously slow*. This approach requires a little detective work before deploying, so, with a lttle info and a ton of luck results can 
 possibly be gained faster. 
 
-I think you can see the idea clearly now and what my hopes are for this app. I'll continue to develop it, and branch off to create something more user friendly. 
+I think you can see the idea clearly and what my hopes are for this app. I'll continue to develop it, and branch off to create something more user friendly. 
 I haven't gotten into GUI development yet but if I find a good source on the subject I'll gladly add that in.
 
 # INSTALLATION
