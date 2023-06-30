@@ -1,7 +1,7 @@
 # FWCracker
 
 This script will attempt to guess at your password using most laymens favorited of password paradigms, ie., abc123. It's handy if you often use such passwords 
-with firmware locks on your devices. Most have long since stopped using these particular patterns.
+with firmware locks on your devices.
 
 *There are three things you'll need other than what you probably already have those being a Python interpreter and an IDE:*
 
