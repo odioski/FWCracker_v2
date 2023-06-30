@@ -46,7 +46,7 @@ Launch FWCracker:
 
 Another option, if you rather not install Python is to use the PyInstaller created executable.
 
-Navigate to the dist folder and unzip FWCracker.zip Inside is FWCracker.exe
+Navigate to /dist folder and unzip FWCracker.zip Inside is FWCracker.exe
 
 
 # SUPPORT
