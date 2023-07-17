@@ -36,7 +36,7 @@ Clone from Github using git:
 	
 	git clone https://github.com/odioski/FWCracker_v2.git
 	
-Navigate to the src folder and use pip to get PySerial: 
+Navigate to the /src folder and use pip to get PySerial: 
 	
 	pip install pyserial
 
