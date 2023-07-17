@@ -21,9 +21,9 @@ def FWCracker():
         global hid_port
         print("\nThis is probably the stickiest question. Which port is you emulator connected to?\n"
                 "\nHere's what I found \n")
-        time.sleep(5)
+        time.sleep(3)
         subprocess.run(code)
-        time.sleep(5)
+        time.sleep(3)
         hid_port = input("\nType the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
         print("\nYou're device is set: " + hid_port + "\n")
         ser = serial.Serial(hid_port)
@@ -49,7 +49,7 @@ def FWCracker():
                 print("\nGot it...\n")
                 find_port()
                 time.sleep(4)
-                print("We'll begin in just a few seconds. Make sure you keep the power on or you'll have to start over... \n")
+                print("We'll begin in just a few seconds... \n")
                 time.sleep(5)
                 print("Here we go...\n")
                 time.sleep(3)
@@ -133,8 +133,8 @@ def FWCracker():
             print("Goodbye...")
         else:
             print("..::Music::..")
-            exit()
         time.sleep(3)
+        exit()
             
 
 
@@ -146,24 +146,25 @@ def FWCracker():
             do_writer_do(to_bytes, n, passcode, control, set_range)
             n += 1
         print("Later...")
-        exit()
 
 
     def do_writer_do(to_bytes, n, passcode, control, set_range):
         print("This is attempt #" + str(n) + " of " + str(set_range) + ", using this password: " + passcode)
         time.sleep(1)
+        space = "\n"
+        space_to_bytes = space.encode(encoding='ascii')
         ser.write(to_bytes)
         time.sleep(1)
         if str(control) == 'y':
-            ser.write("\n")
+            ser.write(space_to_bytes)
         elif str(control) == 'Y':
-            ser.write("\n")
+            ser.write(space_to_bytes)
         elif str(control) == 'yes':
-            ser.write("\n")
+            ser.write(space_to_bytes)
         elif str(control) == 'Yes':
-            ser.write("\n")
+            ser.write(space_to_bytes)
         elif str(control) == 'YES':
-            ser.write("\n")
+            ser.write(space_to_bytes)
         int(n)
         int(set_range)
         time.sleep(2)
