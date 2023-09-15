@@ -1,4 +1,3 @@
 .vs/
 .venv/
-build/
-*.spec
+__pycache__

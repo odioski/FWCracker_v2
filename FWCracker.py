@@ -141,7 +141,7 @@ class FWCracker:
         def build_passcode(some_word, control, set_range):
             n = 1
             while n <= set_range:
-                passcode = some_word + str(n)
+                passcode = some_word + str(n) + "\n"
                 to_bytes = passcode.encode(encoding='ascii')
                 do_writer_do(to_bytes, n, passcode, control, set_range)
                 n += 1
@@ -149,7 +149,7 @@ class FWCracker:
 
 
         def do_writer_do(to_bytes, n, passcode, control, set_range):
-            print("This is attempt #" + str(n) + " of " + str(set_range) + ", using this password: " + passcode)
+            print("This is attempt #" + str(n) + " of " + str(set_range) + ", using this password: " + passcode + "\n")
             time.sleep(1)
             space = "\n"
             space_to_bytes = space.encode(encoding='ascii')
