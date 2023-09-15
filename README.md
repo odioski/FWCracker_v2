@@ -7,9 +7,9 @@ with firmware locks on your devices.
 
 	1. A HID recognizable Keyboard/emulator, preferably one which can send and recieve RS-232. These can be found easily online, but so far I've only found retailers overseas.
 	2. A USB to TTL cable to connect to the emulator. These are more easily found here.
- 	3. A module called PySerial which can had from PyPi.org via pip.
+ 	3. A module called PySerial which can be had from PyPi.org via pip.
 	
-*You can follow this link to see what the hid/emulator looks like:* https://tinyurl.com/5xe4n4mn
+*You can visit the following link to see what the hid/emulator looks like:* https://tinyurl.com/5xe4n4mn
 
 I've considered expanding it to include user input (hints) and possibly some randomization with the hopes of making it faster.
 That's why it's there on Github.
@@ -44,9 +44,9 @@ Launch FWCracker:
 	
 	python -m FWCracker.py
 
-Another option, if you rather not install Python is to use the PyInstaller created executable.
+Another option, is to use the PyInstaller created executable.
 
-Navigate to /dist folder and unzip FWCracker.zip Inside is FWCracker.exe
+Navigate to /dist folder. Inside is FWCracker.exe
 
 
 # SUPPORT
