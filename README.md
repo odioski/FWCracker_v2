@@ -42,7 +42,7 @@ Navigate to the /src folder and use pip to get PySerial:
 
 Launch FWCracker:
 	
-	python -m FWCracker.py
+	python FWCracker.py
 
 Another option, is to use the PyInstaller created executable.
 
