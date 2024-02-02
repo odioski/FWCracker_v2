@@ -40,8 +40,8 @@ class FWCracker:
                 check = number_pattern
                 global_number_pattern = number_pattern
                 while check.isdecimal() == False:
-                    number_pattern = input("\nThis app will only attempt at simple passwords, ie., abc123 "
-                    "if there is no number as part of the sequence, this won't help \n"
+                    number_pattern = input("\nThis app will only attempt at simple passwords, ie., abc123. "
+                    "If there is no number as part of the sequence, this won't help \n"
                     "Please enter a number here or Q to exit: ")
                     check = number_pattern
                 if check.isdecimal():
@@ -177,7 +177,7 @@ class FWCracker:
             time.sleep(2)
             input("The following questions will clue me in to what your password could possibly be. This app can only help if you give me a hint. \n\n"
                     "The passwords we can crack are simple passwords, ie. abc123. Anything more complex and there isn't much we can do that won't take a lifetime to process. \n\n"
-                    "Of course if you're feeling adventurous, a raw brute-force mode is currently being formulated.\n\n"
+                    "Of course, if you're feeling adventurous, a raw brute-force mode is currently being formulated.\n\n"
                     "Press 'Enter' to continue...")
             get_hints()
         
