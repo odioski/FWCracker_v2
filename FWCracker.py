@@ -61,6 +61,9 @@ class FWCracker:
                 elif number_pattern == 'q':
                     print("Goodbye...")
                     exit()        
+                elif number_pattern != "Q" or number_pattern != "q":
+                    print("Okay.")
+                    exit()
 
 
 
