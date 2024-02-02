@@ -16,19 +16,15 @@ code = 'pyserial-ports -v'
 class FWCracker:
     def __init__(self):
 
-        def find_port():
-            global ser 
-            global hid_port
-            print("\nThis is probably the stickiest question. Which port is you emulator connected to?\n"
-                    "\nHere's what I found \n")
-            time.sleep(3)
-            subprocess.run(code)
-            time.sleep(3)
-            hid_port = input("\nType the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
-            print("\nYou're device is set: " + hid_port + "\n")
-            ser = serial.Serial(hid_port)
-            ser.baudrate = 9600
-            #   PySerial and part of the setup...
+
+        def welcome_user():
+            print("\n\nWelcome to FWCracker 2 \n")
+            time.sleep(2)
+            input("The following questions will clue me in to what your password could possibly be. This app can only help if you give me a hint. \n\n"
+                    "The passwords we can crack are simple passwords, ie. abc123. Anything more complex and there isn't much we can do that won't take a lifetime to process. \n\n"
+                    "Of course, if you're feeling adventurous, a raw brute-force mode is currently being formulated.\n\n"
+                    "Press 'Enter' to continue...")
+            get_hints()
 
             
         def get_hints():
@@ -44,6 +40,15 @@ class FWCracker:
                     "If there is no number as part of the sequence, this won't help \n"
                     "Please enter a number here or Q to exit: ")
                     check = number_pattern
+                    if number_pattern == 'Q':
+                        print("Goodbye...")
+                        exit()
+                    elif number_pattern == 'q':
+                        print("Goodbye...")
+                        exit()        
+                    elif number_pattern != "Q" or number_pattern != "q":
+                        print("Okay.")
+                        exit()
                 if check.isdecimal():
                     control =input("\nDoes your BIOS require re-confirmation on failed attempts? Y or N:")
                     print("\nGot it...\n")
@@ -55,18 +60,24 @@ class FWCracker:
                     time.sleep(3)
                     z = 1
                     build_range(global_number_pattern, some_word, control)
-                elif number_pattern == 'Q':
-                    print("Goodbye...")
-                    exit()
-                elif number_pattern == 'q':
-                    print("Goodbye...")
-                    exit()        
-                elif number_pattern != "Q" or number_pattern != "q":
-                    print("Okay.")
-                    exit()
+                
+    
 
+        def find_port():
+            global ser 
+            global hid_port
+            print("\nThis is probably the stickiest question. Which port is you emulator connected to?\n"
+                    "\nHere's what I found \n")
+            time.sleep(3)
+            subprocess.run(code)
+            time.sleep(3)
+            hid_port = input("\nType the name of the port your device is using. Should be something like /dev/tty/USB# or COM#... ")
+            print("\nYou're device is set: " + hid_port + "\n")
+            ser = serial.Serial(hid_port)
+            ser.baudrate = 9600
+            #   PySerial and part of the setup...
 
-
+            
         def build_range(global_number_pattern, some_word, control):
             known_factor = int(global_number_pattern) / 10
             keep = ""
@@ -172,14 +183,6 @@ class FWCracker:
             int(set_range)
             time.sleep(2)
 
-        def welcome_user():
-            print("\n\nWelcome to FWCracker 2 \n")
-            time.sleep(2)
-            input("The following questions will clue me in to what your password could possibly be. This app can only help if you give me a hint. \n\n"
-                    "The passwords we can crack are simple passwords, ie. abc123. Anything more complex and there isn't much we can do that won't take a lifetime to process. \n\n"
-                    "Of course, if you're feeling adventurous, a raw brute-force mode is currently being formulated.\n\n"
-                    "Press 'Enter' to continue...")
-            get_hints()
         
         welcome_user()
     
