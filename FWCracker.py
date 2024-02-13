@@ -46,7 +46,7 @@ class FWCracker:
                     elif number_pattern == 'q':
                         print("Goodbye...")
                         exit()        
-                    elif number_pattern != "Q" or number_pattern != "q":
+                    elif number_pattern != "Q" or number_pattern != "q" or number_pattern.isdecimal == False:
                         print("Okay.")
                         exit()
                 if check.isdecimal():
