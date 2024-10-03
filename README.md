@@ -53,7 +53,10 @@ Navigate to /dist folder. Inside is FWCracker.exe
 
 If FWCracker can't find *pyserial-ports* you'll have to add it to your *PATH*.
 
+You should launch FWCracker from the safety of your env. You should also, optimally,
+install pyserial from the root of your env. If FWCracker can't find pyserial-ports then
+you'll need to add it to your PATH.
+
 You can find it on linux as su:
 
 	find / -name pyserial-ports
- 
