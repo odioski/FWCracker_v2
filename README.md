@@ -63,6 +63,10 @@ You can find it on linux as su:
 This will add whatever *find* returns to your *PATH*: 
 
 	find / -name pyserial-ports -exec echo -e ":{}\n" >> $PATH \;
+
+Make sure with this:
+
+	echo $PATH
  
 That's the fastest way. You can also just fix your venv.
 
