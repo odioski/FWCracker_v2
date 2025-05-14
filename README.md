@@ -64,11 +64,11 @@ This will add whatever *find* returns to your *PATH*:
 
 	find / -name pyserial-ports -exec echo -e ":{}\n" >> $PATH \;
 
-Make sure with this:
+Make sure it got added with this:
 
 	echo $PATH
  
-That's the fastest way. You can also just fix your venv.
+That's the fastest way. You can also just fix your venv
 
 	python -m venv path/to/your/venv
 
@@ -81,5 +81,3 @@ Something like:
  or 
  
 	bin/python ../FWCracker.py
-
- 
