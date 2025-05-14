@@ -53,10 +53,26 @@ Navigate to /dist folder. Inside is FWCracker.exe
 
 If FWCracker can't find *pyserial-ports* you'll have to add it to your *PATH*.
 
-You should launch FWCracker from the safety of your venv. You should also, optimally,
-install pyserial from the root of your venv. If FWCracker still can't find pyserial-ports then
-you'll need to add it to your PATH.
+You should launch FWCracker from the safety of your venv. You should also install pyserial from the root of your venv. 
+If FWCracker still can't find pyserial-ports then you'll most likely need to add it to your *PATH*.
 
 You can find it on linux as su:
 
 	find / -name pyserial-ports
+
+This will add whatever *find* returns to your *PATH*: 
+
+	find / -name pyserial-ports -exec echo -e ":{}\n" >> $PATH \;
+ 
+That's the fastest way. You can also just fix your venv. Use python[VER] -m venv path/to/your/venv,
+cd to your venv and run all commands from there. Or use the provided python and pip in your bin in the venv.
+
+Something like:
+
+	venv/bin/pip install pyserial
+
+ or 
+ 
+	bin/python ../FWCracker.py
+
+ 
