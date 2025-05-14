@@ -64,8 +64,8 @@ This will add whatever *find* returns to your *PATH*:
 
 	find / -name pyserial-ports -exec echo -e ":{}\n" >> $PATH \;
  
-That's the fastest way. You can also just fix your venv. Use python[VER] -m venv path/to/your/venv,
-cd to your venv and run all commands from there. Or use the provided python and pip in your bin in the venv.
+That's the fastest way. You can also just fix your venv. Use python -m venv path/to/your/venv,
+cd to your venv, and run all commands from there. Or use the provided python and pip in your bin in the venv.
 
 Something like:
 
