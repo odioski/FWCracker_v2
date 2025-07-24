@@ -62,7 +62,7 @@ You can find it on linux as su:
 
 This will add whatever *find* returns to your *PATH*: 
 
-	find / -name pyserial-ports -exec echo -e ":{}\n" >> $PATH \;
+	find / -name pyserial-ports -exec echo -e "{}\n" >> $PATH \;
 
 Make sure it got added with this:
 
@@ -80,4 +80,4 @@ Something like:
 
  or 
  
-	bin/python ../FWCracker.py
+	bin/python ../../FWCracker.py
