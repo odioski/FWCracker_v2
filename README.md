@@ -80,4 +80,4 @@ Something like:
 
  or 
  
-	bin/python ../../FWCracker.py
+	bin/python -m bin/pip install pyserial
